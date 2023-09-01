@@ -21,7 +21,9 @@
             <a href="./index.html"><img src="./images/Logo.png" alt="" /></a>
           </div>
           <div>
-            <button class="btn text-2xl font-bold bg-white border-none">Welcome to Our Blog</button>
+            <button class="btn text-2xl font-bold bg-white border-none">
+              Welcome to Our Blog
+            </button>
           </div>
           <div class="navbar-end">
             <a
@@ -34,22 +36,114 @@
       </nav>
     </header>
     <main>
-        <div class="banner ">
-            <div class="hero rounded-lg bg-base-200">
-                <div class="hero-content  flex-col gap-40 lg:flex-row-reverse">
-                  <img src="./images/blog.png" class="max-w-sm rounded-full shadow-2xl" />
-                  <div>
-                    <h1 class="text-5xl text-center font-bold my-8">Todays <span class="text-[#FF1F3D]">Topics!</span></h1>
-                    <p class="py-1 text-xl font-bold">1. The scope of var, let, and const </p>
-                    <p class="py-1 text-xl font-bold">2. Use cases of null and undefined</p>
-                    <p class="py-1 text-xl font-bold">3. REST API</p>
-                  </div>
-                </div>
-              </div>
+      <div class="banner">
+        <div class="hero rounded-lg bg-base-200">
+          <div class="hero-content flex-col gap-40 lg:flex-row-reverse">
+            <img
+              src="./images/blog.png"
+              class="max-w-sm rounded-full shadow-2xl"
+            />
+            <div>
+              <h1 class="text-5xl text-center font-bold my-8">
+                Todays <span class="text-[#FF1F3D]">Topics!</span>
+              </h1>
+              <p class="py-1 text-xl font-bold">
+                1. The scope of var, let, and const
+              </p>
+              <p class="py-1 text-xl font-bold">
+                2. Use cases of null and undefined
+              </p>
+              <p class="py-1 text-xl font-bold">3. REST API</p>
+            </div>
+          </div>
         </div>
-      
+      </div>
+      <div class="card bg-base-100 shadow-xl mt-10">
+        <div class="card-body">
+          <h2 class="card-title">1. The scope of var, let, and const</h2>
+          <p>
+            var, let, and const are three different ways to declare variables in
+            JavaScript, each with its own scope and behavior. Understanding
+            their scopes is crucial for writing clean and predictable code.
+          </p>
+          <p>
+            <b>a. var: </b> <br>
+            <span class="text-red-700">Scope:</span> Function-scoped or globally scoped. <br> <span class="text-red-700">Hoisting:</span> Variables
+            declared with var are hoisted to the top of their containing
+            function or the global scope. This means you can access them before
+            they are declared in the code. <br> <span class="text-red-700">Reassignment:</span> Variables declared with
+            var can be reassigned. <br> Example: <pre><code>
+                function example() { 
+                    if (true) 
+                    { 
+                        var x = 10;
+                    } 
+                    console.log(x); // 10,accessible outside the block }
+            </code></pre> 
+          </p>
+          <p>
+            <b>b. let: </b> <br>
+            <span class="text-red-700">Scope:</span> Block-scoped. Introduced in ES6 to address the issues with var.<br><span class="text-red-700">Hoisting:</span> Variables declared with let are hoisted, but they are not initialized. Accessing them before declaration results in a ReferenceError. <br> <span class="text-red-700">Reassignment:</span> Variables declared with let can be reassigned within the same block scope. <br> Example: <pre><code>
+                function example() {
+                    if (true) {
+                      let y = 20;
+                    }
+                    console.log(y); // ReferenceError: y is not defined
+                  }
+                  
+            </code></pre> 
+          </p>
+          <p>
+            <b>c. const: </b> <br>
+            <span class="text-red-700">Scope:</span> Block-scoped, similar to let.<br><span class="text-red-700">Hoisting:</span> Variables declared with const are hoisted, but like let, they are not initialized. Accessing them before declaration results in a ReferenceError. <br> <span class="text-red-700">Reassignment:</span> Variables declared with const cannot be reassigned after declaration. However, if the variable is an object or an array, its properties or elements can be modified. <br> Example: <pre><code>
+                const PI = 3.14159;
+                PI = 4; // Error: Assignment to a constant variable
+
+                const person = { name: 'John' };
+                person.name = 'Jane'; // Allowed, modifies the object's property
+
+                  
+            </code></pre> 
+          </p>
+          <div class="card-actions justify-end"></div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl mt-10">
+        <div class="card-body">
+          <h2 class="card-title">2. Use cases of null and undefined</h2>
+          <p>
+            null and undefined are two special values in JavaScript that are often used to represent missing or nonexistent values, but they have subtle differences and distinct use cases.
+          </p>
+          <p>
+            <b>a. undefined: </b> <br>
+            undefined is a primitive value in JavaScript.
+ <br> It represents a variable that has been declared but has not been assigned a value or a function that does not return anything explicitly.
+ <br> 
+          </p>
+          <p>
+            <b>b. null: </b> <br>
+            null is also a primitive value in JavaScript.
+ <br> It represents the intentional absence of any object value or a value that is explicitly set to indicate "no value."
+
+ <br> 
+          </p>
+
+          <div class="card-actions justify-end"></div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl mt-10">
+        <div class="card-body">
+          <h2 class="card-title">3. REST API</h2>
+          <p>A REST API, or Representational State Transfer Application Programming Interface, is a standardized approach to designing and interacting with web services. It follows a set of architectural principles and constraints that promote simplicity, scalability, and flexibility in web applications. REST APIs use the HTTP protocol as their foundation and emphasize statelessness, meaning that each client-server interaction should be self-contained and carry all the necessary information. Resources, identified by unique URLs, are central to RESTful services, representing data, entities, or services. These resources have representations, typically in formats like JSON or XML, which clients can manipulate using standard HTTP methods like GET, POST, PUT, and DELETE. The uniformity and clarity of RESTful APIs have made them a popular choice for building web applications, mobile app backends, and enabling seamless communication between different systems on the internet.</p>
+          <div class="card-actions justify-end"></div>
+        </div>
+      </div>
+      <div
+        class="bg-[#FF1F3D] text-white text-center rounded-sm shadow-2xl my-10"
+      >
+        <p>Thanks for Reading!!</p>
+      </div>
     </main>
     <footer></footer>
-    
   </body>
 </html>
