@@ -56,7 +56,7 @@ const loadCardContainer = async(categoryID) =>{
             </div>
             <div>
               <h2 class="text-base font-bold">${news.title}</h2>
-              <p id="verified" class="flex align-center  gap-2 my-3 text-[#171717B2] text-sm">${news.authors[0].profile_name} ${news.authors[0].verified ? `<img class="w-5 h-5" src="./verified.png" alt="" srcset=""/>` : ''}</p>
+              <p id="verified" class="flex align-center  gap-2 my-3 text-[#171717B2] text-sm">${news.authors[0].profile_name} ${news.authors[0].verified ? `<img class="w-5 h-5" src="./images/verified.png" alt="" srcset=""/>` : ''}</p>
               <p class="text-[#171717B2] text-sm">${news.others.views} views</p>
             </div>
           </div>
@@ -74,8 +74,8 @@ const loadCardContainer = async(categoryID) =>{
   
     const div = document.createElement("div");
     div.innerHTML = `
-    <div class="flex flex-col items-center my-28" >  
-    <img class="text-center"  src="./Icon.png" alt="">
+    <div class="flex flex-col items-center my-20" >  
+    <img class="text-center"  src="./images/icon.png" alt="">
     <p class="text-4xl font-bold text-center">Oops!! Sorry, There is no <br> content here</p>
     </div>
     `;
@@ -88,4 +88,4 @@ const loadCardContainer = async(categoryID) =>{
 
 
 handleCategory();
-loadCardContainer(1005);
+loadCardContainer(1000);
